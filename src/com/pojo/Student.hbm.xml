@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 1, 2019 11:28:56 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Student" table="student" catalog="bhavnaotm">
+        <id name="sid" type="java.lang.Integer">
+            <column name="sid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="department" class="com.pojo.Department" fetch="select">
+            <column name="did" />
+        </many-to-one>
+        <property name="sfname" type="string">
+            <column name="sfname" length="200" />
+        </property>
+        <property name="slname" type="string">
+            <column name="slname" length="200" />
+        </property>
+        <property name="semail" type="string">
+            <column name="semail" length="200" />
+        </property>
+        <property name="sphone" type="string">
+            <column name="sphone" length="200" />
+        </property>
+        <property name="saddress" type="string">
+            <column name="saddress" length="200" />
+        </property>
+        <property name="sdateofbirth" type="string">
+            <column name="sdateofbirth" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>
